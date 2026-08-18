@@ -1,14 +1,16 @@
+from __future__ import annotations
+
 import asyncio
 import sys
 from pathlib import Path
 
 import httpx
+import modulo2_4
 import pytest
+from modulo2_4 import fetch_url
+from modulo2_4 import fetch_url_async
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-
-import modulo2_4
-from modulo2_4 import fetch_url, fetch_url_async
 
 
 @pytest.mark.asyncio
